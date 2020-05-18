@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Nyle-canvas</title>
+<!-- Nyle-canvas editor v0.7.0 -->
+</head>
+<body>
+<script>
+  let css = document.createElement('style');
+  let ready = '@keyframes ready {' +
+    '  0% { opacity: 1 }' +
+    '100% { opacity: 0 }';
+  let rules = document.createTextNode(ready);
+  css.type = 'text/css';
+  css.appendChild(rules);
+  document.head.appendChild(css);
+  let showloading = document.createElement('div');
+  showloading.textContent     = 'L O A D I N G'
+  showloading.style.color     = '#ccccff';
+  showloading.style.fontSize  = '36px';
+  showloading.style.animation = 'ready .5s infinite alternate';
+  document.body.appendChild(showloading);
+</script>
+<script type="text/javascript" src="https://cdn.opalrb.com/opal/0.11.4/opal.min.js" onload="Opal.load('opal')"></script>
+<script type="text/javascript" src="https://cdn.opalrb.com/opal/0.11.4/opal-parser.min.js" onload="Opal.load('opal-parser')"></script>
+<script type="text/javascript" src="https://cdn.opalrb.com/opal/0.11.4/native.min.js" onload="Opal.load('native')"></script>
+<script type="text/javascript" src="https://spoolkitamura.github.io/nyle-canvas/dev1/nyle-canvas.js"></script>
+<script type="text/javascript">
+Store.createImage('apple.png', 100, 100, 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAIAAAD/gAIDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAARdSURBVHhe7ZRbluMoEAVnbb31WVh1dhLpQldI6IWMLeLc+jCIfMRH/ffzbv4P+N0xb5aFJ4ejjulIlsFprwxZO+jof5bBUa/0JcvgtEuGrB28X5aBJ4ejLulOlsFpfwxZO+hCloEnh6P+6FGWwWln9CLLwJPDUWd8kizuZnDdng+QxdE2eNOGm2SxygyuHY6c+ckxUp2raCKLSTczf3WgyDqpxUkuk8VQjfn580fCxTaY9ShnZTFFe8TRUvh6FUbfz0FZtN2DbGXhooa82hVKlGCTPeyWRasNyNxL4esS8uXhUG4GK21mnyyaLCNTbg/vM+SD86HuFBbbxlZZ1C4hMx0O5Ry5ujA0mMKSNTbJouQMmeNkKOrI1bWhxwy2XaYui0pTpP0lobQjVy1CpwwWXqYiizJTpOsloXQgt41CswzWXmBNFgUypNmFoUEgt+1CvwyWL7Eoi6cZ0uba0MORq9ahawYKZpRl8ShDGlwbegRye0NoHGBhRkEWLzKk9OWhTSC394TeDiJm1GVJ0RahkyNXt4X2AS6mqCy+DaRiu9BvyJI0Kns+aeUXGMmYyOKrQGpdEko7crWU7V+eTJrqBVIybpVF3Rny2StcB3LbInQK8BL8yuI+kCpXheqHkFItQqcANcHdsiw02I/UaRSaBdhxyrLk/eWhzR6kQrvQL8COgyxuAnnfOnRdQD6+ITR2kp9EQZa8fGAQESRFxj9ZnAXy8oFBRJBMGUNWObhwkilDZcmbxwYdwZC1FnQEQ1YlGHGQxa9AHjw5GHGGrEow4hRkydcPD1KCIasSvDhDViV4cYasSvDiDFmV4MUZsirBizNkVYIXZ8iqBC/OkFUJXpwhqxK8OENWJXhxVJYhXz85GAmGrLVgxDFT/2TZHweOPHhyMOIMWZVgxBmyKsGIM2StBR1BWZYhz54ZXAS/sgzOHHn2zODCSYqMIascXDhJkVGQZcjLBwYRTlJkDFmFYCFIigxkGdw48vhpwYKDHacsy5D3jwoKHOw4Q5aG/QPsOL+yDO4dKfGcsL+Dl2BRliFVnhA2D/ASDFmTsHmAl2Aiy+ArRwo9IWzuYCRjTZYhtb477BxgJENlGXzrSLkvDgsHuJhSkWVI0W8N2wa4mFKQZfAikLrfF/YMsDBjyFJTBhZmlGUZvAukwdeE9TLYv8RWWYa0+YKwWAbLL7Aoy6BAhjT76LBSBmsvsybLoMwU6fqJYZMp7LxMRZZBpSnS+4PCAjPYdpW6LIN6M2SO/sPcU1hyA5tkJag9QwbqNow7hd22sUOWQYcSMllvYcoMVtrDPlkJupWQETsJw2WwyU6OyErQdgEZ911hmikssJ/jshL0X0BGvy20L8HchzgrK8Egy8gyjUKzZRj3KNfIesFQNWTJk6FoDUY8wcWyEky3n7R5LmIp6fuNMNZpmshKMOlp3u7oRUNZOYx/C7RswE2yctjpaqjekjfIWofVt8Gbu+hOloCVKdzdzM/PX0gjdJ8qrQ74AAAAAElFTkSuQmCC')
+</script>
+<script type="text/ruby">
+# 初期設定用のコード (your setup code here)
+include DX
+Window.width   = 640
+Window.height  = 480
+Window.bgcolor = C_BLACK
+
+apple = Image.load('apple.png')
+apple.set_color_key(C_WHITE)
+x = 200                       # ◆追加
+y = 200                       # ◆追加
+
+Window.loop do
+  x = x + Input.x             # ◆追加
+  y = y + Input.y             # ◆追加
+  
+  Window.draw(x, y, apple)    # ◇変更
+end
+</script>
+</body>
+</html>
