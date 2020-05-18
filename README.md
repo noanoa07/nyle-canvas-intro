@@ -8,10 +8,10 @@ Qiita記事
 
 ## フォルダ構成
 ## dx_html
-Rubyプログラム、画像データ、ブラウザ実行コードを含んだ Nyle-canvas形式のHTMLファイル。
+Rubyプログラム、画像データ、ブラウザ実行コード一式を含んだ Nyle-canvas形式のHTMLファイル。
 
 ## dx_ruby
-Nyle-canvas（DXRuby）で書かれたプログラムの内の、Rubyプログラムの部分。
+Nyle-canvas（DXRubyスタイル）で書かれたプログラムの内の、Rubyプログラムの部分。
 
 ## image
-プログラムで使う画像`apple.png`、予備の`orange.png`。
+サンプルプログラムで使う画像`apple.png`、予備の`orange.png`。
