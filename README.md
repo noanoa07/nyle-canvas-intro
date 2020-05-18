@@ -6,12 +6,42 @@ Qiita記事
 
 関連のソースコードです。
 
+## Nyle-canvas リンク
+- Nyle-canvas Wiki
+https://github.com/spoolkitamura/nyle-canvas-doc-jp/wiki
+
+- Nyle-canvasホームページ
+https://spoolkitamura.github.io/nyle-canvas/dev1/site/index.html
+
+- Nyle-canvasマニュアル；エディタの操作方法
+https://spoolkitamura.github.io/nyle-canvas/dev1/site/manual_editor.html
+
+- Nyle-canvas(DXRubyスタイル)エディタ；実際にプログラミングするエディタ画面
+https://spoolkitamura.github.io/nyle-canvas/dev1/nyle-canvas.html?style=dx
+
+
+## 実行方法
+### A. dx_htmlフォルダ内の HTMLファイル
+-  直接ダブルクリックしてブラウザで実行
+
+- ブラウザの任意のページにドラッグ＆ドロップして、ブラウザで実行
+
+- Nyle-canvas(DXRubyスタイル)エディタ画面
+https://spoolkitamura.github.io/nyle-canvas/dev1/nyle-canvas.html?style=dx
+にドラッグ＆ドロップして、Rubyプログラムを確認の上、▶︎実行ボタンを押して実行
+
+### B. dx_rubyフォルダ内の Rubyファイル
+Nyle-canvas(DXRubyスタイル)エディタ画面
+https://spoolkitamura.github.io/nyle-canvas/dev1/nyle-canvas.html?style=dx
+で、Rubyのコードを貼り付けて、▶︎実行ボタンを押して実行
+（使用する画像ファイルがあれば、ドラッグ＆ドロップする）
+
 ## フォルダ構成
-## dx_html
+### dx_html
 Rubyプログラム、画像データ、ブラウザ実行コード一式を含んだ Nyle-canvas形式のHTMLファイル。
 
-## dx_ruby
+### dx_ruby
 Nyle-canvas（DXRubyスタイル）で書かれたプログラムの内の、Rubyプログラムの部分。
 
-## image
+### image
 サンプルプログラムで使う画像`apple.png`、予備の`orange.png`。
