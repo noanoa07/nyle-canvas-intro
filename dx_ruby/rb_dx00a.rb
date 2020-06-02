@@ -1,3 +1,4 @@
+include DX
 # 初期設定用のコード (your setup code here)
 Window.width   = 640
 Window.height  = 480

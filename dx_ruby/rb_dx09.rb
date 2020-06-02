@@ -1,12 +1,16 @@
-# 初期設定用のコード (your setup code here)
 include DX
+# 初期設定用のコード (your setup code here)
 Window.width   = 640
 Window.height  = 480
 Window.bgcolor = C_BLACK
 
 apple = Image.load('apple.png')
-apple.set_color_key(C_WHITE)
+x = 200
+y = 200
 
 Window.loop do
-  Window.draw_scale(100, 100, apple, 0.5, 0.5)    # ◇変更
+  x += Input.x               # ◇変更
+  y += Input.y               # ◇変更
+  
+  Window.draw(x, y, apple)
 end

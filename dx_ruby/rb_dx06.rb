@@ -1,10 +1,11 @@
-# 初期設定用のコード (your setup code here)
 include DX
+# 初期設定用のコード (your setup code here)
 Window.width   = 640
 Window.height  = 480
 Window.bgcolor = C_BLACK
 
+apple = Image.load('apple.png')   # ◆追加
 
 Window.loop do
-  Window.draw_box_fill(100, 100, 540, 380, C_YELLOW)   # ◇変更
+  Window.draw(100, 100, apple)    # ◆追加
 end

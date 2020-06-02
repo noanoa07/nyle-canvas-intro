@@ -1,8 +1,8 @@
+include DX
 # 初期設定用のコード (your setup code here)
-include DX                  # ◆追加
-Window.width   = 640
-Window.height  = 480
-Window.bgcolor = C_BLACK    # ◇変更
+Window.width   = 200       # ◇変更
+Window.height  = 150       # ◇変更
+Window.bgcolor = C_BLACK
 
 Window.loop do
   # 画面描画用のコード (your draw code here)
